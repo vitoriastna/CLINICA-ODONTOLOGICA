@@ -1,12 +1,3 @@
-const lista =
-document.getElementById("listaMedicos");
-
-const medicos =
-JSON.parse(localStorage.getItem("medicos")) || [];
-
-const usuario =
-JSON.parse(localStorage.getItem("usuarioLogado"));
-
 if(usuario){
 
     const elemento =
@@ -19,6 +10,14 @@ if(usuario){
     }
 }
 
+const lista =
+document.getElementById("listaMedicos");
+
+const medicos =
+JSON.parse(localStorage.getItem("medicos")) || [];
+
+const usuario =
+JSON.parse(localStorage.getItem("usuarioLogado"));
 
 medicos.forEach((m, index) => {
 
@@ -69,6 +68,13 @@ function agendar(index){
 
     const usuario =
     JSON.parse(localStorage.getItem("usuarioLogado"));
+
+    if(!data || !hora){
+
+    alert("Selecione uma data e um horário.");
+
+    return;
+}
 
 
     const consulta = {
