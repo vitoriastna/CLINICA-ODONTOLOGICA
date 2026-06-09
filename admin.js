@@ -75,3 +75,16 @@ function mostrarMedicos(){
 
 
 mostrarMedicos();
+
+const consultas =
+JSON.parse(localStorage.getItem("consultas")) || [];
+
+const estatisticas =
+document.getElementById("estatisticas");
+
+if(estatisticas){
+
+    estatisticas.innerHTML = `
+        <p>Total de consultas: ${consultas.length}</p>
+    `;
+}
