@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<meta charset="UTF-8">
+<title>Administrador</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>
+        <i class="fa-solid fa-user-shield"></i>
+        Painel Administrativo
+    </h1>
+
+</header>
+
+<section class="dashboard">
+
+    <div class="dashboard-card">
+
+        <i class="fa-solid fa-user-doctor"></i>
+
+        <h3>Cadastrar Dentista</h3>
+
+        <input
+        type="text"
+        id="nomeMedico"
+        placeholder="Nome do médico">
+
+        <input
+        type="text"
+        id="especialidade"
+        placeholder="Especialidade">
+
+        <input
+        type="text"
+        id="horario"
+        placeholder="Horários disponíveis">
+
+        <button onclick="adicionarMedico()">
+            Cadastrar
+        </button>
+
+    </div>
+
+    <div class="dashboard-card">
+
+        <i class="fa-solid fa-calendar-check"></i>
+
+        <h3>Médicos cadastrados</h3>
+
+        <div id="lista"></div>
+
+    </div>
+
+</section>
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>
