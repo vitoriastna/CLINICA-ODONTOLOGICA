@@ -719,3 +719,16 @@ button:hover{
         font-size:28px;
     }
 }
+
+footer{
+
+    background:#0c9444;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+    margin-top:40px;
+}
