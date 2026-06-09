@@ -4,6 +4,21 @@ document.getElementById("listaMedicos");
 const medicos =
 JSON.parse(localStorage.getItem("medicos")) || [];
 
+const usuario =
+JSON.parse(localStorage.getItem("usuarioLogado"));
+
+if(usuario){
+
+    const elemento =
+    document.getElementById("usuario");
+
+    if(elemento){
+
+        elemento.innerHTML =
+        `Olá, ${usuario.nome}!`;
+    }
+}
+
 
 medicos.forEach((m, index) => {
 
