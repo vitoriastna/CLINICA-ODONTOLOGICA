@@ -1,8 +1,18 @@
 function cadastrar(){
 
-    const nome = document.getElementById("nome").value;
-    const email = document.getElementById("email").value;
-    const senha = document.getElementById("senha").value;
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const senha = document.getElementById("senha").value.trim();
+
+    if(!nome || !email || !senha){
+        alert("Preencha todos os campos.");
+        return;
+    }
+
+    if(localStorage.getItem(email)){
+        alert("Este e-mail já está cadastrado.");
+        return;
+    }
 
     const usuario = {
         nome,
@@ -12,7 +22,7 @@ function cadastrar(){
 
     localStorage.setItem(email, JSON.stringify(usuario));
 
-    alert("Cadastro realizado!");
+    alert("Cadastro realizado com sucesso!");
 
     window.location.href = "login.html";
 }
@@ -40,4 +50,11 @@ function login(){
     }else{
         alert("E-mail ou senha inválidos");
     }
+}
+
+function sair(){
+
+    localStorage.removeItem("usuarioLogado");
+
+    window.location.href = "login.html";
 }
